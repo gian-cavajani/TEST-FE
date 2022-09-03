@@ -1,0 +1,19 @@
+#minicards {
+  margin-top: 15px;
+  @include flexContent(space-around);
+  @include xs {
+    display: none;
+  }
+  figure {
+    @include flexCenter(center);
+    flex-direction: row;
+    img {
+      width: 50px;
+      margin-right: 10px;
+    }
+    p {
+      font-size: 13px;
+      line-height: 100%;
+    }
+  }
+}

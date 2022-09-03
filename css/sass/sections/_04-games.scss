@@ -1,0 +1,134 @@
+#games {
+  margin-top: 15px;
+  display: flex;
+  @include xs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  section {
+    background-color: $secondary-bg-color;
+    @include flexCenter(center);
+    text-align: center;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 6px;
+    margin: 5px;
+    article {
+      h3 {
+        font-weight: 500;
+        font-size: 15px;
+        margin: 15px 7px;
+        border-radius: 5px;
+        border: 1px solid $white-color;
+        padding: 5px;
+      }
+      &:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        p {
+          color: $subcolor-1;
+        }
+        h2 {
+          padding-top: 10px;
+          font-size: 30px;
+        }
+      }
+      input {
+        background-color: transparent;
+        color: var(--white-color);
+        padding: 17px 50px 13px 50px;
+        border-radius: 5px;
+        margin: 25px;
+        font-family: 'rubik', sans-serif;
+      }
+      article {
+        display: flex;
+        figure {
+          margin: 5px;
+          border-radius: 9px;
+          img {
+            border-radius: 9px 9px 0 0;
+            width: 100%;
+          }
+          figcaption {
+            padding-top: 25px;
+            font-weight: 500;
+            height: 70px;
+          }
+        }
+      }
+    }
+  }
+}
+#green {
+  input {
+    border: 2px $green-color solid;
+  }
+  h3,
+  figure,
+  input:hover {
+    background-color: $green-color;
+    color: $secondary-bg-color;
+  }
+}
+#yellow {
+  input {
+    border: 2px $yellow-color solid;
+  }
+  h3,
+  figure,
+  input:hover {
+    background-color: $yellow-color;
+    color: $secondary-bg-color;
+  }
+}
+#orange {
+  input {
+    border: 2px $orange-color solid;
+  }
+  h3,
+  figure,
+  input:hover {
+    background-color: $orange-color;
+  }
+}
+#blue {
+  input {
+    border: 2px $blue-color solid;
+  }
+  h3,
+  figure,
+  input:hover {
+    background-color: $blue-color;
+  }
+}
+#red {
+  input {
+    border: 2px $red-color solid;
+  }
+  h3,
+  figure,
+  input:hover {
+    background-color: $red-color;
+  }
+}
+#purple {
+  input {
+    border: 2px $purple-color solid;
+  }
+  h3,
+  figure,
+  input:hover {
+    background-color: $purple-color;
+  }
+}
+.third-figure {
+  @include md {
+    display: none;
+  }
+  @include xs {
+    display: none;
+  }
+}

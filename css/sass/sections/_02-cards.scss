@@ -1,0 +1,61 @@
+#cards {
+  @include flexContent(space-around);
+  @include xs {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+  }
+  margin-top: 15px;
+  article {
+    @include flexCenter(space-between);
+    @include xs {
+      margin: 10px;
+      scroll-snap-align: start;
+      align-items: center;
+      justify-content: center;
+    }
+
+    width: 100%;
+    flex-direction: column;
+    font-family: 'Saira', sans-serif;
+    background-color: $secondary-bg-color;
+    margin: 3px;
+    border-radius: 7px;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 100%;
+    p {
+      width: 55%;
+      margin-bottom: 30px;
+    }
+    input {
+      font-family: 'Saira', sans-serif;
+      padding: 3px 35px;
+      color: $white-color;
+      border: $white-color 1px solid;
+      background-color: transparent;
+      border-radius: 4px;
+      font-size: 15px;
+      @include xs {
+        font-family: 'Saira', sans-serif;
+        color: $white-color;
+        border: $white-color 1px solid;
+        background-color: transparent;
+        border-radius: 4px;
+        margin: 15px;
+      }
+      &:hover {
+        background-color: $grey-color;
+      }
+    }
+    &:nth-child(3) {
+      @include md {
+        display: none;
+      }
+    }
+  }
+}

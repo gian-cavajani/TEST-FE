@@ -1,0 +1,22 @@
+@import './sass/utils/variables';
+@import './sass/utils/mixins';
+@import './sass/utils/breakpoints';
+@import url('http://fonts.cdnfonts.com/css/saira');
+@import url('https://use.typekit.net/rsw3bla.css');
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+  body {
+    background-color: $main-bg-color;
+    font-family: rubik, sans-serif;
+    font-family: 'Saira', sans-serif;
+    color: $white-color;
+  }
+}
+@import './sass/footer';
+@import './sass/main';
+@import './sass/header';

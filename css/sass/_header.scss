@@ -1,0 +1,92 @@
+header {
+  @include flexContent(space-around);
+  width: 100%;
+  position: fixed;
+  background-color: $main-bg-color;
+  z-index: 10;
+  color: $white-color;
+  font-weight: bold;
+  padding: 15px;
+  flex-direction: row;
+  -webkit-box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.64);
+  -moz-box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.64);
+  box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.8);
+  @include xs {
+    flex-direction: column;
+    align-items: center;
+  }
+  a {
+    figure {
+      width: 100px;
+      @include xs {
+        display: none;
+      }
+    }
+  }
+
+  nav {
+    ul {
+      li {
+        display: inline-block;
+        padding: 10px;
+        a {
+          color: $white-color;
+          display: block;
+          text-decoration: none;
+          border-bottom: solid 3px transparent;
+          font-size: 18px;
+          &:hover {
+            border-bottom: solid 3px white;
+          }
+        }
+        &:nth-child(1) {
+          @include xs {
+            display: none;
+          }
+        }
+        &:nth-child(4) {
+          @include xs {
+            display: none;
+          }
+          @include md {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  section {
+    margin-top: 5px;
+    width: 10%;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    button {
+      border: none;
+      font-family: 'rubik', sans-serif;
+      font-weight: bold;
+      cursor: pointer;
+      &:active {
+        box-shadow: 0 0 #666;
+        transform: translateY(4px);
+      }
+      &:nth-child(1) {
+        background-color: $subcolor-1;
+        padding: 10px 25px;
+        color: $white-color;
+        border-radius: 25px;
+        box-shadow: 0 2px rgb(0, 0, 0);
+        margin-right: 5px;
+        &:hover {
+          background-color: $subcolor-2;
+          box-shadow: 0 0 #666;
+        }
+      }
+      &:nth-child(2) {
+        color: $subcolor-1;
+        background-color: transparent;
+      }
+    }
+  }
+}

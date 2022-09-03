@@ -1,0 +1,37 @@
+#join {
+  @include md {
+    display: none;
+  }
+  @include xs {
+    margin-top: 15px;
+  }
+  background-color: $subcolor-1;
+  article {
+    padding: 20px;
+    @include xs {
+      margin-top: 15px;
+      width: 90%;
+    }
+    width: 1300px;
+    margin: 0 auto;
+    @include flexCenter(space-between);
+    p {
+      @include xs {
+        margin-left: 15px;
+      }
+    }
+    input {
+      font-size: 20px;
+      font-weight: 600;
+      font-family: 'Saira', sans-serif;
+      padding: 5px 55px;
+      background-color: $subcolor-1;
+      color: $white-color;
+      border: $white-color 3px solid;
+      border-radius: 8px;
+      &:hover {
+        background-color: $subcolor-2;
+      }
+    }
+  }
+}

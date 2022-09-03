@@ -1,0 +1,61 @@
+#welcome {
+  height: 400px;
+  background-image: url('../assets/hero-banner.jpeg');
+  background-position: -300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include flexCenter(space-around);
+  @include xs {
+    display: none;
+  }
+  article {
+    font-weight: 700;
+    &:nth-child(1) {
+      text-align: justify;
+      p {
+        font-size: 30px;
+        font-stretch: 200%;
+        line-height: 100%;
+      }
+      input {
+        width: 100%;
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: 15px;
+        font-family: 'Saira', sans-serif;
+        padding: 5px 15px;
+        background-color: $subcolor-1;
+        color: $white-color;
+        border: $white-color 3px solid;
+        border-radius: 8px;
+        &:hover {
+          background-color: $subcolor-2;
+        }
+      }
+    }
+    &:nth-child(2) {
+      @include md {
+        display: none;
+      }
+      text-align: end;
+      p {
+        padding: 5px;
+        font-weight: 500;
+        font-family: 'rubik', sans-serif;
+      }
+      input {
+        margin-top: 5px;
+        font-family: 'Saira', sans-serif;
+        padding: 5px 15px;
+        color: $subcolor-1;
+        border: $subcolor-1 2px solid;
+        background-color: transparent;
+        border-radius: 8px;
+        &:hover {
+          background-color: $subcolor-1;
+          color: $white-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+main {
+  z-index: -1;
+  padding-top: 80px;
+  section {
+    width: 1300px;
+    margin: 0 auto;
+    @include md {
+      width: 95%;
+    }
+    @include xs {
+      width: 95%;
+    }
+  }
+  @include md {
+    width: 95%;
+  }
+}
+@import './sections/01-welcome';
+@import './sections/02-cards';
+@import './sections/03-minicards';
+@import './sections/04-games';
+@import './sections/05-btc';
+@import './sections/06-testimonials';
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: $white-color;
+  &:visited {
+    color: $white-color;
+  }
+}
+input {
+  cursor: pointer;
+}
